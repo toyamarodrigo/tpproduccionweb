@@ -1,0 +1,393 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif !important;
+  background-color: #f6f6f6 !important;
+}
+
+/* ----- Encabezado ----- */
+
+.navbar {
+  background-color: #f78014;
+}
+
+.navbar-brand {
+  font-size: 2.875em;
+  margin-right: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1.3em;
+  color: white;
+  margin-right: 1.5rem;
+}
+
+
+/* ----- Destinos Populares ----- */
+
+.destinos-populares h2 {
+  font-size: 2.5rem !important;
+}
+
+/* ----- Newsletter area ----- */
+
+.newsletter-area {
+  background-color: #333c54;
+  padding: 4rem 0;
+  margin: 4rem 0;
+}
+
+.newsletter-input {
+  padding: 0.5rem 0.75rem !important;
+  width: 100%;
+}
+
+.newsletter-btn {
+  background-color: #f78014 !important;
+}
+
+/* ----- Links de Interes ----- */
+
+.herramientas {
+  text-align: center;
+}
+
+#tab-content {
+  background-color: #f78014;
+  padding-bottom: 0.5em;
+}
+
+.tab-0 {
+  font-size: 0.9375em;
+  padding-bottom: 0.6em;
+  padding-top: 0.6em;
+}
+
+#tab-content-1 {
+  background-color: #411f26;
+  padding-top: 0.6em;
+}
+
+.tab-0a {
+  font-size: 0.9375em;
+  margin-bottom: 0.5em;
+}
+
+/* ----- Footer ----- */
+
+footer {
+  padding-top: 0.9375em;
+  padding-bottom: 1.5em;
+  background-color: rgb(5, 5, 5);
+}
+
+#logo {
+  height: 3.2875em;
+  width: 3.2975em;
+}
+
+.legajo {
+  margin-top: 1.2875em;
+}
+
+.ubicacion-texto {
+  font-size: 0.8em;
+}
+
+.ubicacion-texto li {
+  list-style: none;
+}
+
+.ubicacion,
+.phoneicon,
+.emailicon {
+  height: 2.1875em;
+  width: 2.1875em;
+}
+
+.somosletra {
+  font-size: 1.125em;
+}
+
+.button .btn-danger {
+  padding-right: 10px;
+}
+
+/* ----- Egreso de menores ----- */
+
+.Menorinmigra {
+  font-size: 1.125em;
+}
+
+.btn-primary {
+  background-color: orange !important;
+  border-color: orange !important;
+}
+
+.btn-primary:hover {
+  background-color: orangered !important;
+  border-color: orangered !important;
+}
+
+.btn-ver-mas {
+  position: relative;
+  top: -100px;
+  font-size: 1.125em;
+  margin-right: 2em;
+}
+
+.carta {
+  transition: 0.3s ease;
+}
+
+.carta:hover {
+  opacity: 1;
+  transform: scale(1.02, 1.02);
+}
+
+/* ----- Producto portada ----- */
+
+.imagen1,
+.imagen2,
+.imagen3 {
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.imagen1:hover,
+.imagen2:hover,
+.imagen3:hover {
+  opacity: 1;
+  transform: scale(1.1, 1.1);
+}
+
+.incluye li {
+  font-size: 1.1em;
+  padding-bottom: 1em;
+}
+
+.descripcion {
+  margin-top: 10px;
+}
+
+.descripcion .row {
+  border-width: 5px;
+}
+
+/* ----- Comienza el codigo cs para las estrellas ----- */
+
+input[type="radio"] {
+  display: none;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  font-size: 30px;
+}
+
+.clasificacion label:hover,
+.clasificacion label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+
+/* ----- iframe Google maps -----*/
+
+.google-maps {
+  position: relative;
+  padding-bottom: 25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.google-maps iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/*
+col <576pxs
+col-sm ≥576px
+col-md ≥768px
+col-lg ≥992px
+col-xl ≥1200px
+*/
+
+/* ----- Carousel -----*/
+
+#main-slider {
+  position: relative;
+  text-align: center;
+}
+
+#main-slider .carousel .carousel-content {
+  margin-top: 150px;
+}
+
+#main-slider .carousel .slide-margin {
+  margin-top: 100px;
+}
+
+.titulo-carousel {
+  font-size: 8.5rem;
+}
+
+.subtitulo-carousel {
+  font-size: 1.2rem;
+}
+
+.carousel-inner {
+  height: 640px;
+}
+
+.imagen {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  left: 0 !important;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  display: block !important;
+  height: 640px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.carousel-imagen1 {
+  background-image: url("../images/carousel-img1.jpeg");
+}
+
+.carousel-imagen2 {
+  background-image: url("../images/carousel-img2.jpg");
+}
+
+.carousel-imagen3 {
+  background-image: url("../images/carousel-img3.jpeg");
+}
+
+#main-slider .item.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: initial;
+}
+
+.btn-slide {
+  padding: 0.5em 1.5em !important;
+  color: #fff;
+  border-radius: 4px;
+  margin-top: 25px;
+  display: inline-block;
+  transition: 0.5s;
+  margin: 10px 10px;
+  background-color: #f78014 !important;
+}
+
+.btn-slide:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 19px 43px !important;
+  transform: translate3d(0px, -1px, 0px);
+  color: white;
+}
+
+/* ----- Media query ----- */
+
+@media only screen and (max-width: 576px) {
+  .titulo-carousel {
+    font-size: 2.5rem;
+  }
+
+  .subtitulo-carousel {
+    font-size: 1rem;
+  }
+
+  .carousel-inner {
+    height: 420px;
+  }
+
+  .imagen {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0 !important;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    display: block !important;
+    height: 420px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+
+  .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .titulo-carousel {
+    font-size: 4.5rem;
+  }
+
+  .subtitulo-carousel {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .titulo-carousel {
+    font-size: 5rem;
+  }
+
+  .subtitulo-carousel {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .titulo-carousel {
+    font-size: 7.5rem;
+  }
+
+  .subtitulo-carousel {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .titulo-carousel {
+    font-size: 9rem;
+  }
+
+  .subtitulo-carousel {
+    font-size: 1.2rem;
+  }
+}
+
+.titulo-carousel {
+  font-family: "Nothing You Could Do", cursive;
+}
+
+.subtitulo-carousel {
+  font-family: "Rubik", sans-serif;
+  font-weight: bold;
+}
