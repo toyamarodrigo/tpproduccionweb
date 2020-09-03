@@ -23,6 +23,7 @@ $dataCiudades = json_decode($str_data_ciudades, true);
                                     <form action="" method="GET" class="">
                                         <?php $opcion = 'Todo'; ?>
                                         <?php !empty($_GET['continente']) ? $opcion = $_GET['continente'] : $opcion = "" ?>
+                                        <input type="hidden" name="pais" value="<?php echo !isset($_GET['pais']) ? $_GET['pais'] : '' ?>">
 
                                         <select name="continente" class="custom-select custom-select-lg" id="continente" onchange="this.form.submit()">
                                             <option value="" selected="selected">Seleccionar Continente</option>
@@ -32,8 +33,6 @@ $dataCiudades = json_decode($str_data_ciudades, true);
                                                 </option>
                                             <?php endforeach ?>
                                         </select>
-                                        <input type="hidden" name="pais" value="<?php echo isset($_GET['pais']) ? $_GET['pais'] : '' ?>">
-                                        <input type="hidden" name="ciudad" value="<?php echo isset($_GET['ciudad']) ? $_GET['ciudad'] : '' ?>">
                                     </form>
 
                                 </div>
@@ -83,19 +82,25 @@ $dataCiudades = json_decode($str_data_ciudades, true);
                                             <option>Seleccionar Ciudad</option>
                                             <?php foreach ($dataCiudades as $ciudades) : ?>
 
-                                                <?php if ($ciudades['paisNombre'] == $_GET['pais']) : ?>
-                                                    <option <?php echo ($opcion3 == $ciudades['nombre']) ? 'selected="selected"' : '' ?>>
-                                                        <?php echo $ciudades['nombre']; ?>
-                                                    </option>
-                                                <?php endif ?>
-
-                                                <?php if ($ciudades['continenteNombre'] == $_GET['continente']) : ?>
-                                                    <option <?php echo ($opcion3 == $ciudades['nombre']) ? 'selected="selected"' : '' ?>>
-                                                        <?php echo $ciudades['nombre']; ?>
-                                                    </option>
-                                                <?php endif ?>
-
                                                 <?php if (($_GET['pais'] == null || $_GET['pais'] == 'Todo') && ($_GET['continente'] == null || $_GET['continente'] == 'Todo')) : ?>
+                                                    <option <?php echo ($opcion3 == $ciudades['nombre']) ? 'selected="selected"' : '' ?>>
+                                                        <?php echo $ciudades['nombre']; ?>
+                                                    </option>
+                                                <?php endif ?>
+
+                                                <?php if ($ciudades['continenteNombre'] == $_GET['continente'] && empty($_GET['pais'])) : ?>
+                                                    <option <?php echo ($opcion3 == $ciudades['nombre']) ? 'selected="selected"' : '' ?>>
+                                                        <?php echo $ciudades['nombre']; ?>
+                                                    </option>
+                                                <?php endif ?>
+
+                                                <?php if ($ciudades['paisNombre'] == $_GET['pais'] && !empty($_GET['continente'])) : ?>
+                                                    <option <?php echo ($opcion3 == $ciudades['nombre']) ? 'selected="selected"' : '' ?>>
+                                                        <?php echo $ciudades['nombre']; ?>
+                                                    </option>
+                                                <?php endif ?>
+                                                
+                                                <?php if ($ciudades['paisNombre'] == $_GET['pais'] && empty($_GET['continente'])) : ?>
                                                     <option <?php echo ($opcion3 == $ciudades['nombre']) ? 'selected="selected"' : '' ?>>
                                                         <?php echo $ciudades['nombre']; ?>
                                                     </option>
